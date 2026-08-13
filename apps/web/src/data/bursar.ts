@@ -15,6 +15,9 @@ export const BURSAR = {
   initials:    'MI',
   institution: 'StackForgeAI University',
   office:      'Finance Office',
+  email:       'marie-claire.ingabire@sfu.ac.rw',
+  phone:       '+250 788 345 678',
+  joinedDate:  '10 Aug 2022',
 }
 
 // ── Navigation ────────────────────────────────────────────────────────────────

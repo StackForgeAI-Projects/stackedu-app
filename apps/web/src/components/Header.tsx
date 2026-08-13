@@ -8,7 +8,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu'
-import { Link } from '@tanstack/react-router'
+import { Link, useRouterState } from '@tanstack/react-router'
 import { cn } from '@/lib/utils'
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -35,6 +35,10 @@ export function Header({
   onLogout,
 }: HeaderProps) {
   const [searchValue, setSearchValue] = useState('')
+  const currentPath = useRouterState({ select: (s) => s.location.pathname })
+  const roleSegment = currentPath.split('/').filter(Boolean)[0] || 'student'
+  // /ict/settings is already System Settings — personal account settings live at a different path
+  const settingsPath = roleSegment === 'ict' ? '/ict/account-settings' : `/${roleSegment}/settings`
 
   return (
     <header
@@ -203,14 +207,14 @@ export function Header({
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild className="gap-2 cursor-pointer">
               {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-              <Link to={'/student/profile' as any}>
+              <Link to={`/${roleSegment}/profile` as any}>
                 <User className="h-4 w-4" />
                 View Profile
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem asChild className="gap-2 cursor-pointer">
               {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-              <Link to={'/student/settings' as any}>
+              <Link to={settingsPath as any}>
                 <Settings className="h-4 w-4" />
                 Account Settings
               </Link>

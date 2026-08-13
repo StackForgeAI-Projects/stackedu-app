@@ -9,6 +9,9 @@ export const LECTURER = {
   initials:    'AU',
   department:  'Computer Science',
   institution: 'StackForgeAI University',
+  email:       'amina.uwase@sfu.ac.rw',
+  phone:       '+250 788 234 567',
+  joinedDate:  '14 Jan 2021',
 }
 
 // ── Courses ───────────────────────────────────────────────────────────────────

@@ -18,6 +18,9 @@ export const ACADEMIC_ADMIN = {
   role:        'Registrar',
   institution: 'StackForgeAI University',
   office:      'Registry Office',
+  email:       'emmanuel.nkurunziza@sfu.ac.rw',
+  phone:       '+250 788 567 890',
+  joinedDate:  '5 Jun 2019',
 }
 
 // ── Navigation ────────────────────────────────────────────────────────────────

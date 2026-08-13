@@ -1,5 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
-import { GraduationCap, BookOpen, CreditCard, ClipboardList, ShieldCheck, ExternalLink } from 'lucide-react'
+import { GraduationCap, BookOpen, CreditCard, ClipboardList, Library, ShieldCheck, ExternalLink } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -51,6 +51,14 @@ const ROLES: RoleCard[] = [
     iconBg:      '#7C3AED',
     iconColor:   '#FFFFFF',
     destination: '/academic/dashboard',
+  },
+  {
+    name:        'Librarian',
+    description: 'Manage e-library resources, collections and requests',
+    icon:        Library,
+    iconBg:      '#B91C1C',
+    iconColor:   '#FFFFFF',
+    destination: '/librarian/dashboard',
   },
   {
     name:        'ICT Manager',

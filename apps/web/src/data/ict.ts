@@ -18,6 +18,9 @@ export const ICT_MANAGER = {
   role:        'ICT Manager',
   institution: 'StackForgeAI University',
   office:      'Technology Office',
+  email:       'patrick.habimana@sfu.ac.rw',
+  phone:       '+250 788 678 901',
+  joinedDate:  '20 Mar 2020',
 }
 
 // ── Navigation ────────────────────────────────────────────────────────────────
